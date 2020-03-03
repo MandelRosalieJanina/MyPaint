@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+}
+
+
+
+h3{
+    padding-bottom: 4%;
+}
+p{
+    padding-top: 5%;;
+}
+
+a{
+
+    color: black;
+
+}
+#register{
+    padding: 4%;
+   margin: 0 auto;
+    width: 46%;
+    font-size: 110%;
+    border-radius: 8px;;
+
+    color: black;
+    background-color: darkgray;
+    border: none;
+}
+
+#register a{
+    color: white;
+    text-decoration: none;
+}
+body{
+
+    background-image: url("../bilder/watercolourHintergrund.jpg");
+  background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+
+
+    font-family: sans-serif ;
+}
+#icon {
+    width: 40%;
+}
+#loginBox{
+
+   /* box-shadow: darkgray  2px 2px 2px 2px;*/
+
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 1%;
+
+    width: 20%;
+
+
+    margin: 10%  auto ;
+    text-align: center;
+    border-radius: 20px;
+
+    background-color: white;
+
+
+}
+
+
+#loginBox input[type=text],[type=email], input[type=password]{
+    padding: 4%;
+    margin: 2%;
+    width: 45%;
+    border-radius: 8px;
+    border: 1px solid black ;
+}
+
+#loginBox input[type=submit]{
+
+
+    padding: 2%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    width: 46%;
+    font-size: 110%;
+    border-radius: 8px;;
+
+
+    background-color: darkgray;
+    border: none;
+
+}
+
+#loginBox button{
+
+
+    padding: 2%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    width: 55%;
+    font-size: 140%;
+    border-radius: 8px;;
+
+
+    background-color: darkgray;
+    border: none;
+
+}

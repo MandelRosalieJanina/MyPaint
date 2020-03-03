@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="../style/profilStyle.css">
+    <link rel="stylesheet" type="text/css" href="../style/allgemein.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/e7df220bd7.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+<div class="header">
+
+
+
+    <a href="home.html" class="logo"> <img src="../bilder/farbpalette.png" ><p>| myPaint</p></a>
+    <input type="text" value="" id="input" >
+    <button class="lupe" onclick="filterSelection()"><img src="../bilder/lupe.png" width="15px"></button>
+    <div class="header-right">
+
+
+        <a class="active" href="home.html"><p>Home</p></a>
+        <a href="profil.html"><p>Profil</p></a>
+        <a href="contact.html"><p>Contact</p></a>
+
+    </div>
+
+</div>
+
+<div id="box">
+    <div id="userInfo">
+
+        <div id="userImageBox" >
+
+            <img  id="userImage" src="../bilder/userImage.png">
+            <h1>Username: </h1><h2>usernameexample</h2>
+        </div>
+
+        <div id="info" >
+            <p>If you are interested in my drawings write me an email</p>
+            <a href="contact.html">Email: userX@gmail.com</a>
+        </div>
+    </div>
+
+
+
+    <div class="tab">
+        <button class="tablinks"  id="default" onclick="openCity(event, 'addPicture')">add picture</button>
+        <button class="tablinks"  onclick="openCity(event, 'ownPictures')">own pictures</button>
+        <button class="tablinks"  onclick="openCity(event, 'savedPictures')">saved picture</button>
+    </div>
+
+    <div id="addPicture" class="tabcontent">
+
+        <div id="addPictureContent">
+
+            <div id="addImage">
+                <img src="../bilder/plus.png">
+            </div>
+
+            <input type="text" id="title" value="Add a title...">
+            <input type="text" id="text" value="What is your picture about?...">
+
+
+            <button id="submitButton" onclick="title()">Share</button>
+        </div>
+    </div>
+
+    <div id="ownPictures" class="tabcontent">
+
+
+    </div>
+
+    <div id="savedPictures" class="tabcontent">
+
+
+    </div>
+</div>
+
+<script>
+    document.getElementById("default").click();
+    function openCity(evt, cityName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";
+
+
+
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function() {
+                if (this.readyState === 4 && this.status === 200) {
+
+                    const response = JSON.parse(this.responseText);
+                    const elements = [];
+
+                    console.log(response);
+
+
+                    const parentElement = document.getElementById(cityName);
+
+                    for (let i = 1; i < response.length ; i++) {
+
+                        const newPost = document.createElement("div");
+                        const parts = response[i].split(";");
+                        const path = parts[0];
+                        const likes = parts[1];
+                        const hashtags = parts[2];
+
+                        const image = document.createElement('img');
+                        image.src = path;
+                        image.alt = 'cannot display image';
+
+                        const hashtagWrapper = document.createElement("div");
+                        const hashParts = hashtags.split("#");
+
+                        let  text = document.createElement("p");
+                        for (let j = 0; j < hashParts.length; j++) {
+
+                            if(j >= 1){ text.textContent += " #"+hashParts[j];
+                            }
+
+
+                        }
+                        hashtagWrapper.appendChild(text);
+
+
+                        const likesWrapper = document.createElement("div");
+                        const likeNum = document.createElement("p");
+                        likeNum.textContent = likes;
+                        likesWrapper.appendChild(likeNum);
+                        const icon = document.createElement("i");
+                        icon.setAttribute("class", "fas fa-heart");
+                        likesWrapper.appendChild(icon);
+
+
+                        newPost.appendChild(image);
+                        newPost.appendChild(hashtagWrapper);
+                        newPost.appendChild(likesWrapper);
+
+                        //design
+
+                        image.style.width = "100%";
+                        newPost.style.backgroundColor = "whitesmoke";
+                        newPost.style.width = "24%";
+                        newPost.style.padding = "20px";
+                        newPost.style.cssFloat = "left";
+                        newPost.style.margin = "2px";
+                        newPost.style.overflow = "scroll";
+                        newPost.style.height = "350px";
+                        newPost.style.borderRadius = "10px";
+                        icon.style.fontSize = "50px";
+                        likeNum.style.cssFloat = "right";
+
+
+                        likesWrapper.style.cssFloat = "left";
+
+
+
+
+
+                        elements.push({elm: newPost, tags: hashParts});
+
+                        parentElement.appendChild(newPost);
+
+
+
+                    }
+
+                    console.log(elements);
+
+                    const input = document.getElementById("input");
+                    input.addEventListener('input', () => {
+                        const value = input.value;
+                        let foundKeyWord = false;
+
+                        for (const elm of elements) {
+                            for (const tag of elm.tags) {
+                                if (tag.includes(value)) {
+                                    foundKeyWord = true;
+                                }
+                            }
+
+                            if (foundKeyWord) {
+                                elm.elm.style.display = 'block';
+                            } else {
+                                elm.elm.style.display = 'none';
+                            }
+                        }
+                    });
+
+
+                }
+            };
+
+            if(cityName === "savedPictures"){
+                xmlhttp.open("GET", "../php/ownPictures.php", true);
+                xmlhttp.send();
+            }else if(cityName === "ownPictures"){
+                xmlhttp.open("GET", "../php/ownPictures.php", true);
+                xmlhttp.send();
+
+
+
+            }
+
+
+
+
+    }
+
+</script>
+
+</body>
+</html>

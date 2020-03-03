@@ -1,0 +1,151 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial;
+}
+
+#box{
+    width: 80%;
+    margin: 0 auto;
+    padding: 100px;
+
+}
+
+
+.row a{
+    text-decoration: none;
+    color: black;
+
+}
+/* Content */
+.content {
+    background-color: whitesmoke;
+    padding: 10px;
+    height: 99%;
+
+    overflow: hidden;
+    border-radius: 10px;
+
+}
+
+
+/* Center website */
+.main {
+    max-width: 1200px;
+    margin: auto;
+    padding-top: 100px;
+
+    width: 100%;
+}
+
+
+/* Style the header with a grey background and some padding */
+.header {
+    width: 100%;
+    background-color: white;
+height: 90px;
+    position: fixed;
+    margin-top: 0;
+    padding: 0;
+}
+
+/* Style the header links */
+.header a {
+    float: left;
+    color: black;
+    text-align: center;
+
+    text-decoration: none;
+    font-size: 25px;
+    line-height: 25px;
+
+    padding-top: 5px;
+
+}
+.header a p{
+    float: right;
+    padding: 5px;
+
+}
+
+
+
+/* Style the active/current link*/
+.header a.active p {
+    background-color: lavenderblush;
+    color: black;
+    border-radius: 4px;
+}
+
+/* Float the link section to the right */
+.header-right {
+    float: right;
+
+    margin-right: 5%;
+
+}
+#input{
+    width: 30%;
+    float: left;
+    margin-left: 10%;
+}
+
+input[type=text]{
+    width: 100%;
+    padding: 10px 10px;
+    margin-top: 30px;
+    box-sizing: border-box;
+}
+
+.lupe{
+    margin-left: 2%;
+    margin-top: 30px;
+    width: 40px;
+    padding: 10px;
+    float: left;
+    border-radius: 10px;
+    border: none;
+    background-color: lavenderblush;
+
+}
+
+.logo img{
+width: 90px;
+height:90px;
+    margin: 0;
+    padding: 0;
+}
+
+.logo p{
+    margin-top: 30px;
+    font-family: 'Dancing Script', cursive;
+    font-size: 35px;
+}
+
+
+
+.fa, span {
+    color: lightpink;
+
+    float: right;
+
+    font-size: 300%;
+}
+
+i{
+    color: lightpink;
+
+}
+#wrapper{
+    max-width: 1200px;
+    margin: auto;
+    padding-top: 100px;
+
+    width: 100%;
+
+
+}

@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="../style/profilStyle.css">
+    <link rel="stylesheet" type="text/css" href="../style/allgemein.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+</head>
+<body>
+<div class="header">
+
+
+
+    <a href="home.html" class="logo"> <img src="../bilder/farbpalette.png" ><p>| myPaint</p></a>
+    <input type="text" value="" id="input" >
+    <button class="lupe" onclick="filterSelection()"><img src="../bilder/lupe.png" width="15px"></button>
+    <div class="header-right">
+
+
+        <a class="active" href="home.html"><p>Home</p></a>
+        <a href="profil.html"><p>Profil</p></a>
+
+    </div>
+
+</div>
+
+<div id="box">
+    <div id="userInfo">
+
+        <div id="userImageBox" >
+
+            <img  id="userImage" src="../bilder/userImage.png">
+            <h1>Username</h1>
+        </div>
+
+        <div id="info" >
+            <p>If you are interested in my drawings write me an email</p>
+            <a href="contact.html">Email: userX@gmail.com</a>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+        <div class="main">
+            <div class="row">
+                <div class="column acyrl blumen">
+                    <a href="otherProfile.html">
+                        <div class="content">
+
+                            <img src="../bilder/acyrl1.jpg"   alt="Mountains" style="width:100%">
+
+
+                            <i  class="fa fa-heart" onclick="turnRed()"></i>
+                            <img class="fa"src="../bilder/save.png" width="60px" height="60px">
+
+                            <p>#acyrl#blumen</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="column aquarell haus">
+                    <a href="otherProfile.html">
+                        <div class="content">
+                            <img src="../bilder/aquarell1.jpg" alt="Lights" style="width:100%">
+                            <i  class="fa fa-heart" onclick="turnRed()"></i>
+                            <img class="fa"src="../bilder/save.png" width="60px" height="60px">
+
+                            <p>#aquarell#haus</p>
+
+                        </div>
+                    </a>
+                </div>
+                <div class="column aquarell nature">
+                    <a href="otherProfile.html">
+                        <div class="content">
+                            <img src="../bilder/bilder.jpg" alt="Nature" style="width:100%">
+                            <i class="fa fa-heart" onclick="turnRed()"></i>
+                            <img class="fa"src="../bilder/save.png" width="60px" height="60px">
+
+                            <p>#aquarell#nature</p>
+
+                        </div>
+                    </a>
+                </div>
+
+                <div class="column nature lavendel oil">
+                    <a href="otherProfile.html">
+                        <div class="content">
+                            <img src="../bilder/oil1.jpg" alt="Car" style="width:100%">
+                            <i class="fa fa-heart" onclick="turnRed()"></i>
+                            <img class="fa"src="../bilder/save.png" width="60px" height="60px">
+
+                            <p>#nature#lavendel#oil</p>
+
+                        </div>
+                    </a>
+                </div>
+                <div class="column model digitalpicture redhair">
+                    <a href="otherProfile.html">
+                        <div class="content">
+                            <img src="../bilder/digital2.jpg" alt="Car" style="width:100%">
+                            <i  class="fa fa-heart" onclick="turnRed()"></i>
+                            <img class="fa"src="../bilder/save.png" width="60px" height="60px">
+
+                            <p>#model#digitalpicture#redhair</p>
+
+                        </div>
+                    </a>
+                </div>
+                <div class="column digitalpicture">
+                    <a href="otherProfile.html">
+                        <div class="content">
+                            <img src="../bilder/digital5.jpg" alt="Car" style="width: 100%">
+                            <i class="fa fa-heart" onclick="turnRed()"></i>
+                            <img class="fa"src="../bilder/save.png" width="60px" height="60px">
+
+                            <p>Lorem ipsum dolor..</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="column aquarell">
+                    <a href="otherProfile.html">
+                        <div class="content">
+                            <img src="../bilder/aquarell3.jpg" alt="Car" style="width: 100%" >
+                            <i class="fa fa-heart" onclick="turnRed()"></i>
+                            <img class="fa"src="../bilder/save.png" width="60px" height="60px">
+
+                            <p>#aquarell</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="column people">
+                    <a href="otherProfile.html">
+                        <div class="content">
+                            <img src="../bilder/aquarell5.jpg" alt="Car" style="width:100%">
+                            <i class="fa fa-heart" onclick="turnRed()"></i>
+                            <img class="fa"src="../bilder/save.png" width="60px" height="60px">
+
+                            <p>Lorem ipsum dolor..</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="column people">
+                    <a href="otherProfile.html">
+                        <div class="content">
+                            <img src="../bilder/oil4.jpg" alt="Car" style="width:100%">
+                            <i class="fa fa-heart" onclick="turnRed()"></i>
+                            <img class="fa"src="../bilder/save.png" width="60px" height="60px">
+
+                            <p>Lorem ipsum dolor..</p>
+                        </div>
+
+                    </a>
+
+                </div>
+
+                <div class="column nature">
+                    <a href="otherProfile.html">
+                        <div class="content">
+
+                            <img src="../bilder/gebirge.jpg"   alt="Mountains" style="width:100%">
+
+                            <i  class="fa fa-heart" onclick="turnRed()"></i>
+                            <img class="fa"src="../bilder/save.png" width="60px" height="60px">
+
+                            <p>Lorem ipsum dolor..</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="column nature">
+                    <a href="otherProfile.html">
+                        <div class="content">
+                            <img src="../bilder/bilder.jpg" alt="Nature" style="width:100%">
+                            <i class="fa fa-heart" onclick="turnRed()"></i>
+                            <img class="fa"src="../bilder/save.png" width="60px" height="60px">
+
+                            <p>Lorem ipsum dolor..</p>
+
+                        </div>
+                    </a>
+                </div>
+
+                <div class="column cars">
+                    <a href="otherProfile.html">
+                        <div class="content">
+                            <img src="../bilder/augen.jpg" alt="Car" style="width:100%">
+                            <i class="fa fa-heart" onclick="turnRed()"></i>
+                            <img class="fa"src="../bilder/save.png" width="60px" height="60px">
+
+                            <p>Lorem ipsum dolor..</p>
+
+                        </div>
+                    </a>
+                </div>
+                <div class="column cars">
+                    <a href="otherProfile.html">
+                        <div class="content">
+                            <img src="../bilder/schildkröte.jpg" alt="Car" style="width:100%">
+                            <i  class="fa fa-heart" onclick="turnRed()"></i>
+                            <img class="fa"src="../bilder/save.png" width="60px" height="60px">
+
+                            <p>Lorem ipsum dolor..</p>
+
+                        </div>
+                    </a>
+                </div>
+                <div class="column cars">
+                    <a href="otherProfile.html">
+                        <div class="content">
+                            <img src="../bilder/flugzeug.jpg" alt="Car" style="width:100%">
+                            <i class="fa fa-heart" onclick="turnRed()"></i>
+                            <img class="fa"src="../bilder/save.png" width="60px" height="60px">
+
+                            <p>Lorem ipsum dolor..</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="column people">
+                    <a href="otherProfile.html">
+                        <div class="content">
+                            <img src="../bilder/gebirge.jpg" alt="Car" style="width:100%">
+                            <i class="fa fa-heart" onclick="turnRed()"></i>
+                            <img class="fa"src="../bilder/save.png" width="60px" height="60px">
+                            <p>Lorem ipsum dolor..</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="column people">
+                    <a href="otherProfile.html">
+                        <div class="content">
+                            <img src="../bilder/oil2.jpg" alt="Car" style="width:100%">
+                            <i class="fa fa-heart" onclick="turnRed()"></i>
+                            <img class="fa"src="../bilder/save.png" width="60px" height="60px">
+
+                            <p>Lorem ipsum dolor..</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="column people">
+                    <a href="otherProfile.html">
+                        <div class="content">
+                            <img src="../bilder/Fishce.jpg" alt="Car" style="width:100%">
+                            <i class="fa fa-heart" onclick="turnRed()"></i>
+                            <img class="fa"src="../bilder/save.png" width="60px" height="60px">
+
+
+                            <p>Lorem ipsum dolor..</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="column cars">
+                    <a href="otherProfile.html">
+                        <div class="content">
+                            <img src="../bilder/schildkröte.jpg" alt="Car" style="width:100%">
+                            <i class="fa fa-heart" onclick="turnRed()"></i>
+                            <img class="fa"src="../bilder/save.png" width="60px" height="60px">
+
+
+                            <p>Lorem ipsum dolor..</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="column cars">
+                    <a href="otherProfile.html">
+                        <div class="content">
+                            <img src="../bilder/flugzeug.jpg" alt="Car" style="width:100%">
+                            <i class="fa fa-heart" onclick="turnRed()"></i>
+                            <img class="fa"src="../bilder/save.png" width="60px" height="60px">
+
+
+                            <p>Lorem ipsum dolor..</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="column people">
+                    <a href="otherProfile.html">
+                        <div class="content">
+                            <img src="../bilder/gebirge.jpg" alt="Car" style="width:100%">
+
+                            <i class="fa fa-heart" onclick="turnRed()"></i>
+                            <img class="fa"src="../bilder/save.png" width="60px" height="60px">
+
+
+                            <p>Lorem ipsum dolor..</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="column people">
+                    <a href="otherProfile.html">
+                        <div class="content">
+                            <img src="../bilder/FeensterBild.jpg" alt="Car" style="width:100%">
+                            <i class="fa fa-heart" onclick="turnRed()"></i>
+                            <img class="fa"src="../bilder/save.png" width="60px" height="60px">
+
+
+                            <p>Lorem ipsum dolor..</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="column people">
+                    <a href="otherProfile.html">
+                        <div class="content">
+                            <img src="../bilder/spraypaint2.jpg" alt="Car" style="width:100%">
+                            <i class="fa fa-heart" onclick="turnRed()"></i>
+                            <img class="fa"src="../bilder/save.png" width="60px" height="60px">
+
+
+                            <p>Lorem ipsum dolor..</p>
+                        </div>
+
+                    </a>
+
+                </div>
+                <div class="column people">
+                    <a href="otherProfile.html">
+                        <div class="content">
+                            <img src="../bilder/oil2.jpg" alt="Car" style="width:100%">
+                            <i class="fa fa-heart" onclick="turnRed()"></i>
+                            <img class="fa"src="../bilder/save.png" width="60px" height="60px">
+
+
+                            <p>Lorem ipsum dolor..</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="column people">
+                    <a href="otherProfile.html">
+                        <div class="content">
+                            <img src="../bilder/Fishce.jpg" alt="Car" style="width:100%">
+                            <i class="fa fa-heart" onclick="turnRed()"></i>
+                            <img class="fa"src="../bilder/save.png" width="60px" height="60px">
+
+
+                            <p>Lorem ipsum dolor..</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="column cars">
+                    <a href="otherProfile.html">
+                        <div class="content">
+                            <img src="../bilder/digital6.jpg" alt="Car" style="width:100%">
+                            <i class="fa fa-heart" onclick="turnRed()"></i>
+                            <img class="fa"src="../bilder/save.png" width="60px" height="60px">
+
+
+                            <p>Lorem ipsum dolor..</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="column cars">
+                    <a href="otherProfile.html">
+                        <div class="content">
+                            <img src="../bilder/flugzeug.jpg" alt="Car" style="width:100%">
+                            <i class="fa fa-heart" onclick="turnRed()"></i>
+                            <img class="fa"src="../bilder/save.png" width="60px" height="60px">
+
+
+                            <p>Lorem ipsum dolor..</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="column people">
+                    <a href="otherProfile.html">
+                        <div class="content">
+                            <img src="../bilder/gebirge.jpg" alt="Car" style="width:100%">
+
+                            <i class="fa fa-heart" onclick="turnRed()"></i>
+                            <img class="fa"src="../bilder/save.png" width="60px" height="60px">
+
+
+                            <p>Lorem ipsum dolor..</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="column people">
+                    <a href="otherProfile.html">
+                        <div class="content">
+                            <img src="../bilder/FeensterBild.jpg" alt="Car" style="width:100%">
+                            <i class="fa fa-heart" onclick="turnRed()"></i>
+                            <img class="fa"src="../bilder/save.png" width="60px" height="60px">
+
+
+                            <p>Lorem ipsum dolor..</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="column people">
+                    <a href="otherProfile.html">
+                        <div class="content">
+                            <img src="../bilder/spraypaint2.jpg" alt="Car" style="width:100%">
+                            <i class="fa fa-heart" onclick="turnRed()"></i>
+                            <img class="fa"src="../bilder/save.png" width="60px" height="60px">
+
+
+                            <p>Lorem ipsum dolor..</p>
+                        </div>
+
+                    </a>
+
+                </div>
+                <div class="column people">
+                    <a href="otherProfile.html">
+                        <div class="content">
+                            <img src="../bilder/oil2.jpg" alt="Car" style="width:100%">
+                            <i class="fa fa-heart" onclick="turnRed()"></i>
+                            <img class="fa"src="../bilder/save.png" width="60px" height="60px">
+
+
+                            <p>Lorem ipsum dolor..</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="column people">
+                    <a href="otherProfile.html">
+                        <div class="content">
+                            <img src="../bilder/aquarell7.jpg" alt="Car" style="width:100%">
+                            <i class="fa fa-heart" onclick="turnRed()"></i>
+                            <img class="fa"src="../bilder/save.png" width="60px" height="60px">
+
+
+
+                            <p>Lorem ipsum dolor..</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="column cars">
+                    <a href="otherProfile.html">
+                        <div class="content">
+                            <img src="../bilder/Loewe.jpg" alt="Car" style="width:100%">
+                            <i class="fa fa-heart" onclick="turnRed()"></i>
+                            <img class="fa"src="../bilder/save.png" width="60px" height="60px">
+
+
+
+                            <p>Lorem ipsum dolor..</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="column cars">
+                    <a href="otherProfile.html">
+                        <div class="content">
+                            <img src="../bilder/flugzeug.jpg" alt="Car" style="width:100%">
+                            <i class="fa fa-heart" onclick="turnRed()"></i>
+                            <img class="fa"src="../bilder/save.png" width="60px" height="60px">
+
+
+
+                            <p>Lorem ipsum dolor..</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="column people">
+                    <a href="otherProfile.html">
+                        <div class="content">
+                            <img src="../bilder/gebirge.jpg" alt="Car" style="width:100%">
+
+                            <i class="fa fa-heart" onclick="turnRed()"></i>
+                            <img class="fa"src="../bilder/save.png" width="60px" height="60px">
+
+
+
+                            <p>Lorem ipsum dolor..</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="column people">
+                    <a href="otherProfile.html">
+                        <div class="content">
+                            <img src="../bilder/FeensterBild.jpg" alt="Car" style="width:100%">
+                            <i class="fa fa-heart" onclick="turnRed()"></i>
+                            <img class="fa"src="../bilder/save.png" width="60px" height="60px">
+
+
+
+                            <p>Lorem ipsum dolor..</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="column people">
+                    <a href="otherProfile.html">
+                        <div class="content">
+                            <img src="../bilder/spraypaint2.jpg" alt="Car" style="width:100%">
+                            <i class="fa fa-heart" onclick="turnRed()"></i>
+                            <img class="fa"src="../bilder/save.png" width="60px" height="60px">
+
+
+
+                            <p>Lorem ipsum dolor..</p>
+                        </div>
+
+                    </a>
+
+                </div>
+                <div class="column people">
+                    <a href="otherProfile.html">
+                        <div class="content">
+                            <img src="../bilder/oil2.jpg" alt="Car" style="width:100%">
+                            <i class="fa fa-heart" onclick="turnRed()"></i>
+                            <img class="fa"src="../bilder/save.png" width="60px" height="60px">
+
+
+
+                            <p>Lorem ipsum dolor..</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="column people">
+                    <a href="otherProfile.html">
+                        <div class="content">
+                            <img src="../bilder/Fishce.jpg" alt="Car" style="width:100%">
+                            <i class="fa fa-heart" onclick="turnRed()"></i>
+                            <img class="fa"src="../bilder/save.png" width="60px" height="60px">
+
+
+
+                            <p>Lorem ipsum dolor..</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="column cars">
+                    <a href="otherProfile.html">
+                        <div class="content">
+                            <img src="../bilder/schildkröte.jpg" alt="Car" style="width:100%">
+                            <i class="fa fa-heart" onclick="turnRed()"></i>
+                            <img class="fa"src="../bilder/save.png" width="60px" height="60px">
+
+
+                            <p>Lorem ipsum dolor..</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="column cars">
+                    <a href="otherProfile.html">
+                        <div class="content">
+                            <img src="../bilder/flugzeug.jpg" alt="Car" style="width:100%">
+                            <i class="fa fa-heart" onclick="turnRed()"></i>
+                            <img class="fa"src="../bilder/save.png" width="60px" height="60px">
+
+
+                            <p>Lorem ipsum dolor..</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="column people">
+                    <a href="otherProfile.html">
+                        <div class="content">
+                            <img src="../bilder/gebirge.jpg" alt="Car" style="width:100%">
+
+                            <i class="fa fa-heart" onclick="turnRed()"></i>
+                            <img class="fa"src="../bilder/save.png" width="60px" height="60px">
+
+
+                            <p>Lorem ipsum dolor..</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="column people">
+                    <a href="otherProfile.html">
+                        <div class="content">
+                            <img src="../bilder/oil3.jpg" alt="Car" style="width:100%">
+                            <i class="fa fa-heart" onclick="turnRed()"></i>
+                            <img class="fa"src="../bilder/save.png" width="60px" height="60px">
+
+
+                            <p>Lorem ipsum dolor..</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="column people">
+                    <a href="otherProfile.html">
+                        <div class="content">
+                            <img src="../bilder/spraypaint5.jpg" alt="Car" style="width:100%">
+                            <i class="fa fa-heart" onclick="turnRed()"></i>
+                            <img class="fa"src="../bilder/save.png" width="60px" height="60px">
+
+
+                            <p>Lorem ipsum dolor..</p>
+                        </div>
+
+                    </a>
+
+                </div>
+            </div>
+        </div>
+
+
+
+</div>
+
+
+</body>
+</html>

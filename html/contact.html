@@ -1,0 +1,130 @@
+<!DOCTYPE>
+<html>
+<head>
+
+    <link rel="stylesheet" type="text/css" href="../style/allgemein.css">
+    <link rel="stylesheet" type="text/css" href="../style/contactStyle.css">
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<div class="header">
+
+
+
+    <a href="home.html" class="logo"> <img src="../bilder/farbpalette.png" ><p>| myPaint</p></a>
+    <input type="text" value="" id="input" >
+    <button class="lupe" onclick="filterSelection()"><img src="../bilder/lupe.png" width="15px"></button>
+    <div class="header-right">
+
+
+        <a class="active" href="home.html"><p>Home</p></a>
+        <a href="profil.html"><p>Profil</p></a>
+        <a href="contact.html"><p>Contact</p></a>
+
+    </div>
+
+</div>
+
+<div id="box">
+<form>
+    <h1 >Name</h1>
+    <input type="text" id="fName" name="firstname" placeholder="Your name..."><div id="nameCheck"></div>
+    <h1>Email</h1>
+    <input id="email" type="text" name="email" size="30" placeholder="Your email...">
+    <div id="emailCheck"></div><br>
+
+
+    <h1 class="subject">Subject</h1>
+    <input id="subject" name="subject" placeholder="Write something..." style=" width: 50%;  height:25%; border-radius: 5px; border: 2px solid lightpink; padding: 10px; ">
+    <br>
+
+</form>
+<a onclick="return formCheck()" class="button">SUBMIT</a>
+</div>
+
+<script>
+
+    function formCheck() {
+
+        checkEmail();
+        checkFirstName();
+        checkSubjekt();
+
+
+
+
+
+        function checkSubjekt() {
+
+            let subject = document.getElementById("subject").value;
+
+
+            if(subject === "") {
+                document.getElementById("subject").style.border= "3px solid red";
+            }else {
+                document.getElementById("subject").style.border = "1px solid lightgrey";
+            }
+
+        }
+
+        function checkFirstName() {
+            let fName = document.getElementById("fName").value;
+
+
+
+
+            if(fName === "") {
+                document.getElementById("fName").style.border= "3px solid red";
+            }else if(fName){
+                document.getElementById("fName").style.border = "1px solid lightgrey";
+            }
+
+        }
+
+
+
+
+
+        function checkEmail() {
+
+
+            let email = document.getElementById("email").value;
+            let subject = document.getElementById("subject").value;
+            let fName = document.getElementById("fName").value;
+
+            if(email === "") {
+                document.getElementById("email").style.border= "3px solid red";
+
+            }else if(email.length < 7){
+                document.getElementById("emailCheck").textContent ="- email is to short"
+                document.getElementById("email").style.border= "3px solid red";
+            }else if (email.indexOf("@") === -1) {
+                document.getElementById("emailCheck").textContent ="- email has no @"
+                document.getElementById("email").style.border= "3px solid red";
+            } else if (email.indexOf(".", email.indexOf("@")) === -1) {
+                document.getElementById("emailCheck").textContent ="- email has no dot after the @"
+                document.getElementById("email").style.border= "3px solid red";
+            }else  {
+                document.getElementById("email").style.border = "1px solid lightgrey";
+
+
+                if(email && fName && subject){
+                    alert("message has been sent");
+                }
+
+            }
+
+
+
+
+
+        }
+
+
+
+    }
+</script>
+</body>
+</html>
